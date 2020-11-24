@@ -9,7 +9,7 @@ app = Flask(__name__)
 def index():
     
     animal_request = requests.get('http://localhost:5001/animal')
-    animal = request.json()['animal']
+    animal = animal_request.json()['animal']
 
     noise_request = requests.post('http://localhost:5001/noise', json={"animal":animal})
     noise = noise_request.json()['noise']
