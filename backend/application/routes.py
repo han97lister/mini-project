@@ -10,9 +10,9 @@ animals = {'Cow':'Moooo', 'Dog':'Woof woof!', 'Sheep':'Baabaa', 'Cat':'meow', 'L
 def get_animal():
     
     animal = random.choice(animals).key()
-    return jsonify({"animal":animal})
+    return jsonify({"animal":animal}, mimetype="text/plain")
 
-@app.route('/animal/<string:animal>', methods=['POST'])
+@app.route('/noise', methods=['POST'])
 def post_noise(animal):
     
     animal = request.get_json()['animal'].lower()
