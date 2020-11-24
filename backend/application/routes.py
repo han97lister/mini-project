@@ -17,7 +17,7 @@ def post_noise(animal):
     
     animal = request.get_json()['animal'].lower()
     noise = animals.get(animal)
-    return jsonify({"noise": noise})
-
+    return jsonify({"noise": noise}, mimetype="text/plain")
+ 
 
 
