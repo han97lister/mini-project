@@ -16,8 +16,11 @@ class TestApp( TestBase ):
         self.assertEqual( response.status_code, 200 )
         self.assertIn( b'animal', response.data )
     
-    def test_post_noise(self):
+    def test_post_noise_sheep(self):
 
         response = self.client.post( url_for('post_noise'), json={"animal":"Sheep"})
         self.assertEqual( response.status_code, 200 )
-        self.assertIn( b'Baabaa', response.data )        
+        self.assertIn( b'Baabaa', response.data )
+
+    
+              
