@@ -8,10 +8,10 @@ app = Flask(__name__)
 @app.route('/', methods=['GET'])
 def index():
     
-    animal_request = requests.get('http://localhost:5001/animal')
+    animal_request = requests.get('http://backend:5001/animal')
     animal = animal_request.json()['animal']
 
-    noise_request = requests.post('http://localhost:5001/noise', json={"animal":animal})
+    noise_request = requests.post('http://backend:5001/noise', json={"animal":animal})
     noise = noise_request.json()['noise']
 
     return render_template('index.html', animal=animal, noise=noise)
