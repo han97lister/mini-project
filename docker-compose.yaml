@@ -3,13 +3,17 @@ services:
   frontend:
     build: ./frontend/.
     image: hlistersims/mini-project:frontend 
+    deploy:
+      replicas: 3
     ports: 
     - target: 5000 
       published: 5000
       protocol: tcp
   backend:
     build: ./backend/.
-    image: hlistersims/mini-project:backend 
+    image: hlistersims/mini-project:backend
+    deploy:
+      replicas: 3 
     ports: 
     - target: 5001 
       published: 5001
