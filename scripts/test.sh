@@ -7,7 +7,7 @@ python3 -m venv venv
 
 pip3 install -r requirements.txt
 
-pytest --cov ./frontend --cov-report term-missing
+pytest --cov ./frontend/app.py --cov-report term-missing
 pytest --cov ./backend/application --cov-report term-missing
 
 deactivate
