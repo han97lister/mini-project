@@ -2,7 +2,7 @@ version: "3.7"
 services:
   frontend:
     build: ./frontend/.
-    image: hlistersims/mini-project:frontend 
+    image: h15t3r5im5/mini-project:frontend 
     deploy:
       replicas: 3
     ports: 
@@ -11,7 +11,7 @@ services:
       protocol: tcp
   backend:
     build: ./backend/.
-    image: hlistersims/mini-project:backend
+    image: h15t3r5im5/mini-project:backend
     deploy:
       replicas: 3 
     ports: 
