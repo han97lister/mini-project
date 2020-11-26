@@ -18,6 +18,7 @@ pipeline {
                 sh "chmod +x push.sh"
                 sh "./scripts/push.sh"
             }
+        }    
         stage('Deploy') {
             steps {
                 sh "chmod +x deploy.sh"
